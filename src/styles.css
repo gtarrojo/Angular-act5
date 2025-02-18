@@ -29,13 +29,13 @@ img {
   width: 100%;
   gap: 30px;
   margin-top: 2rem;
-  padding: 2rem;
+  padding: 1.8rem;
 }
 
 .form {
-  width: 30%;
+  width: 35%;
 }
 
 .list {
-  width: 70%;
+  width: 65%;
 }

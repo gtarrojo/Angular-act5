@@ -1,1 +1,62 @@
-<p>formulario-blog works!</p>
+<section>
+  <form class="form__container" [formGroup]="newsForm" (ngSubmit)="addNews()">
+    <div>
+      <label for="title">Título</label>
+      <input
+        class="title__news"
+        [class.invalid]="
+          newsForm.get('title')?.invalid &&
+          (newsForm.get('title')?.touched || newsForm.get('title')?.dirty)
+        "
+        type="text"
+        id="title"
+        formControlName="title"
+      />
+    </div>
+    <div>
+      <label for="image">URL de la imagen</label>
+      <input
+        class="image__news"
+        [class.invalid]="
+          newsForm.get('image')?.invalid &&
+          (newsForm.get('image')?.touched || newsForm.get('image')?.dirty)
+        "
+        type="text"
+        id="image"
+        formControlName="image"
+      />
+    </div>
+    <div>
+      <label for="text">Contenido</label>
+      <textarea
+        rows="10"
+        class="text__news"
+        [class.invalid]="
+          newsForm.get('text')?.invalid &&
+          (newsForm.get('text')?.touched || newsForm.get('text')?.dirty)
+        "
+        id="text"
+        formControlName="text"
+      ></textarea>
+    </div>
+    <div>
+      <label for="date">Fecha</label>
+      <input
+        class="date__news"
+        [class.invalid]="
+          newsForm.get('date')?.invalid &&
+          (newsForm.get('date')?.touched || newsForm.get('date')?.dirty)
+        "
+        type="date"
+        id="date"
+        formControlName="date"
+      />
+    </div>
+    <input
+      class="submit"
+      type="submit"
+      value="Publicar"
+      [disabled]="!newsForm.valid"
+    />
+  </form>
+</section>

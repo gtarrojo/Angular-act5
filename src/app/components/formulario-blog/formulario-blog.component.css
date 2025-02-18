@@ -1,0 +1,55 @@
+input {
+  display: block;
+  width: 100%;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  resize: vertical;
+  overflow-wrap: break-word;
+}
+label {
+  font-size: 0.6rem;
+}
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0.6rem;
+}
+
+.invalid {
+  border: 1.4px solid red;
+  border-radius: 2px;
+}
+
+.date__news {
+  width: fit-content;
+}
+
+.submit {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  border: none;
+  border-radius: 24px;
+  color: #fff;
+  padding: 12px;
+  font-size: 0.4rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 117, 252, 0.3);
+  width: 3rem;
+  height: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(37, 117, 252, 0.5);
+}
+
+.submit:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 10px rgba(37, 117, 252, 0.2);
+}
