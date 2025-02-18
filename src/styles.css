@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 :root {
-  --size-font: calc(1vw + 1vh);
+  --size-font: calc(1vw + 1vh + 10px);
 }
 
 html {
@@ -19,7 +19,7 @@ body {
 }
 
 img {
-  width: 100%;
+  width: 40%;
   height: auto;
   display: block;
 }
@@ -32,10 +32,10 @@ img {
   padding: 2rem;
 }
 
-.formulario {
+.form {
   width: 30%;
 }
 
-.listado {
+.list {
   width: 70%;
 }

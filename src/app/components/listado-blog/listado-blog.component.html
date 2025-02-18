@@ -1,1 +1,15 @@
-<p>listado-blog works!</p>
+<section>
+  <h2>Listado</h2>
+  <div class="list__container">
+    @for( article of newsList; track article.title){
+    <article>
+      <figure><img [src]="article.image" [alt]="article.title" /></figure>
+      <h3>{{ article.title }}</h3>
+      <p>{{ article.date }}</p>
+      <p>{{ article.text }}</p>
+    </article>
+    } @empty {
+    <p>No tenemos noticias</p>
+    }
+  </div>
+</section>
