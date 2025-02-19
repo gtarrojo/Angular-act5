@@ -20,8 +20,8 @@ export class FormularioBlogComponent {
     this.newsForm = new FormGroup({
       title: new FormControl('', [
         Validators.required,
-        Validators.minLength(1),
-        Validators.maxLength(200),
+        Validators.minLength(2),
+        Validators.maxLength(100),
       ]),
       image: new FormControl('', [
         Validators.required,

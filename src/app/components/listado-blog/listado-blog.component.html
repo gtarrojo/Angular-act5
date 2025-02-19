@@ -2,12 +2,7 @@
   <h2>Listado</h2>
   <div class="list__container">
     @for( article of newsList; track article.title){
-    <article>
-      <figure><img [src]="article.image" [alt]="article.title" /></figure>
-      <h3>{{ article.title }}</h3>
-      <p>{{ article.date | date : "dd/MM/yyyy" }}</p>
-      <p>{{ article.text }}</p>
-    </article>
+    <app-news-card [newsArticle]="article"></app-news-card>
     } @empty {
     <p>No tenemos noticias</p>
     }

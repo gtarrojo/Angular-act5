@@ -1,0 +1,8 @@
+<article>
+  <figure>
+    <img [src]="newsArticle().image" [alt]="newsArticle().title" />
+  </figure>
+  <h3>{{ newsArticle().title }}</h3>
+  <p>{{ newsArticle().date | date : "dd/MM/yyyy" }}</p>
+  <p>{{ newsArticle().text }}</p>
+</article>
