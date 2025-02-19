@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {
   FormControl,
   FormGroup,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { NewsService } from '../../services/news.service';
 
 @Component({
   selector: 'app-formulario-blog',
@@ -36,7 +37,11 @@ export class FormularioBlogComponent {
     });
   }
 
+  newsData = inject(NewsService);
+
   addNews() {
-    console.log(this.newsForm.value);
+    const newArticle = this.newsForm.value;
+    this.newsData.addNews(newArticle);
+    this.newsForm.reset();
   }
 }
