@@ -13,6 +13,7 @@ export class NewsService {
   }
 
   addNews(article: IArticle): void {
+    // deberiamos tener en cuenta si el articulo es un duplicado
     this.arrayNews.unshift(article);
   }
 }

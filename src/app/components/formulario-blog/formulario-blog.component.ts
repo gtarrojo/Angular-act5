@@ -39,7 +39,7 @@ export class FormularioBlogComponent {
 
   newsData = inject(NewsService);
 
-  addNews() {
+  sendNews() {
     const newArticle = this.newsForm.value;
     this.newsData.addNews(newArticle);
     this.newsForm.reset();
