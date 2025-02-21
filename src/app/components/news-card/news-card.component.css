@@ -1,0 +1,50 @@
+/* card  */
+
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1.5rem;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card figure {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border-radius: 6px;
+  margin: 0 auto;
+}
+
+.card figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.card p:first-of-type {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.card p:not(:first-of-type) {
+  margin-top: 0.5rem;
+  color: #666;
+  line-height: 1.5;
+}

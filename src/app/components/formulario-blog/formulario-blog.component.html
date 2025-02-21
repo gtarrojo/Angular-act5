@@ -13,9 +13,9 @@
       @if (checkCurrentError("title", "required")) {
       <p class="error">El campo es requerido.</p>
       }@if (checkCurrentError("title", "minlength")) {
-      <p class="error">El título debe tener tres letras como mínimo.</p>
+      <p class="error">El título debe tener tres carácteres como mínimo.</p>
       } @if (checkCurrentError("title", "maxlength")) {
-      <p class="error">El título excede el máximo.</p>
+      <p class="error">El título excede el máximo de carácteres.</p>
       }
     </div>
     <div>

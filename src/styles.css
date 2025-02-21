@@ -19,23 +19,87 @@ body {
 }
 
 img {
-  width: 40%;
+  width: 100%;
   height: auto;
   display: block;
 }
 
 .flex {
   display: flex;
-  width: 100%;
-  gap: 30px;
-  margin-top: 2rem;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem auto;
   padding: 1.8rem;
+  width: 90%;
+  max-width: 1200px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.form {
-  width: 35%;
-}
-
+/* Estilos para cada sección */
+.form,
 .list {
-  width: 65%;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #fafafa;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* card  */
+
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1.5rem;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Efecto hover para darle dinamismo */
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Contenedor de la imagen */
+.card figure {
+  width: 100%;
+  max-width: 500px; /* Limita el ancho máximo, se adapta en dispositivos pequeños */
+  aspect-ratio: 3 / 2; /* Relación de aspecto 3:2 */
+  overflow: hidden;
+  border-radius: 6px;
+  margin: 0 auto; /* Centra el contenedor si es necesario */
+}
+
+/* Imagen responsiva */
+.card figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Título de la noticia */
+.card h3 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Fecha de la noticia */
+.card p:first-of-type {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+/* Texto de la noticia */
+.card p:not(:first-of-type) {
+  margin-top: 0.5rem;
+  color: #666;
+  line-height: 1.5;
 }

@@ -1,4 +1,11 @@
-.heading {
-  font-size: 1.2rem;
+header {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  padding: 0.5rem 0;
   text-align: center;
+  color: #fff;
+}
+
+.heading {
+  font-size: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
