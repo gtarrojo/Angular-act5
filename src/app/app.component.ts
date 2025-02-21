@@ -11,8 +11,6 @@ import { ListadoBlogComponent } from './components/listado-blog/listado-blog.com
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  // tengo que cambiar el input por el signal y añadir un componente en el for para cada articulo
-  // Despues en principio trabajar a full en el diseño y posibles mejores de funcionalidad
   newsData = inject(NewsService);
   newsArray: IArticle[] = [];
 

@@ -4,49 +4,58 @@
       <label for="title">Título</label>
       <input
         class="title__news"
-        [class.invalid]="
-          newsForm.get('title')?.invalid &&
-          (newsForm.get('title')?.touched || newsForm.get('title')?.dirty)
-        "
+        [class.invalid]="checkControl('title')"
+        [class.valid]="checkValid('title')"
         type="text"
         id="title"
         formControlName="title"
       />
+      @if (checkCurrentError("title", "required")) {
+      <p class="error">El campo es requerido.</p>
+      }@if (checkCurrentError("title", "minlength")) {
+      <p class="error">El título debe tener tres letras como mínimo.</p>
+      } @if (checkCurrentError("title", "maxlength")) {
+      <p class="error">El título excede el máximo.</p>
+      }
     </div>
     <div>
       <label for="image">URL de la imagen</label>
       <input
         class="image__news"
-        [class.invalid]="
-          newsForm.get('image')?.invalid &&
-          (newsForm.get('image')?.touched || newsForm.get('image')?.dirty)
-        "
+        [class.invalid]="checkControl('image')"
+        [class.valid]="checkValid('image')"
         type="text"
         id="image"
         formControlName="image"
       />
+      @if (checkCurrentError("image", "required")) {
+      <p class="error">El campo es requerido.</p>
+      }@if (checkCurrentError("image", "pattern")) {
+      <p class="error">Debe ser una URL válida.</p>
+      }
     </div>
     <div>
       <label for="text">Contenido</label>
       <textarea
         rows="10"
         class="text__news"
-        [class.invalid]="
-          newsForm.get('text')?.invalid &&
-          (newsForm.get('text')?.touched || newsForm.get('text')?.dirty)
-        "
+        [class.invalid]="checkControl('text')"
+        [class.valid]="checkValid('text')"
         id="text"
         formControlName="text"
       ></textarea>
+      @if (checkCurrentError("text", "required")) {
+      <p class="error">El campo es requerido.</p>
+      }@if (checkCurrentError("text", "minlength")) {
+      <p class="error">El texto de la noticia es muy corto.</p>
+      }
     </div>
     <div>
       <label for="date">Fecha</label>
       <input
         class="date__news"
-        [class.invalid]="
-          newsForm.get('date')?.invalid &&
-          (newsForm.get('date')?.touched || newsForm.get('date')?.dirty)
-        "
+        [class.invalid]="checkControl('date')"
+        [class.valid]="checkValid('date')"
         type="date"
         id="date"
         formControlName="date"
