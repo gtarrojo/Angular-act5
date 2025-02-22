@@ -49,7 +49,3 @@ body {
     width: 35%;
   }
 }
-
-.delete-btn:hover {
-  background: red;
-}

@@ -3,6 +3,7 @@
 .card {
   background: #fff;
   padding: 1rem;
+  margin: 0 auto;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -16,9 +17,14 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+.card__container {
+  margin: 0 auto;
+  max-width: 980px;
+}
+
 .card figure {
   width: 100%;
-  max-width: 500px;
+  max-width: 980px;
   aspect-ratio: 3 / 2;
   overflow: hidden;
   border-radius: 6px;
@@ -56,11 +62,12 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s ease;
-  margin: 1rem auto;
   display: block;
   font-size: 0.6rem;
   height: 1rem;
   width: 1rem;
+  margin: 0 auto;
+  margin-top: 60px;
 }
 
 .delete__btn:hover {
