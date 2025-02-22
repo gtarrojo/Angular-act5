@@ -48,3 +48,22 @@
   color: #666;
   line-height: 1.5;
 }
+
+.delete__btn {
+  background: tomato;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin: 1rem auto;
+  display: block;
+  font-size: 0.6rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+.delete__btn:hover {
+  background: red;
+  transform: translateY(2px);
+}

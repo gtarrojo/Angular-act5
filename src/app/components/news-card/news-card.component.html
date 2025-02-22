@@ -5,4 +5,5 @@
   <h3>{{ newsArticle().title }}</h3>
   <p>{{ newsArticle().date | date : "dd/MM/yyyy" }}</p>
   <p>{{ newsArticle().text }}</p>
+  <button class="delete__btn" (click)="deleteArticle()">X</button>
 </article>

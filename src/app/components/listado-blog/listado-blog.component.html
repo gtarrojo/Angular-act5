@@ -1,9 +1,9 @@
 <section>
   <div class="list__container">
-    @for( article of newsList; track article.title){
-    <app-news-card [newsArticle]="article"></app-news-card>
+    @for( article of newsList; track article.title; let i = $index){
+    <app-news-card [newsArticle]="article" [index]="i"></app-news-card>
     } @empty {
-    <p>No tenemos noticias</p>
+    <p class="empty">No tenemos noticias.</p>
     }
   </div>
 </section>
