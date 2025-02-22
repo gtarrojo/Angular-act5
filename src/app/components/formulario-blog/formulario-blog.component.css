@@ -1,3 +1,12 @@
+section {
+  margin: 2rem auto;
+  padding: 2rem;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 input {
   display: block;
   width: 100%;
@@ -11,6 +20,9 @@ textarea {
 }
 label {
   font-size: 0.6rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
 }
 
 .form__container {
@@ -47,12 +59,15 @@ label {
   color: #fff;
   padding: 12px;
   font-size: 0.4rem;
+  font-weight: 700;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 15px rgba(37, 117, 252, 0.3);
-  width: 3rem;
-  height: 1.2rem;
-  letter-spacing: 0.5px;
+  width: 120px;
+  height: 50px;
+  letter-spacing: 1.2px;
+  text-align: center;
+  margin: 10px auto;
 }
 
 .submit:hover {
@@ -63,4 +78,14 @@ label {
 .submit:active {
   transform: translateY(1px);
   box-shadow: 0 3px 10px rgba(37, 117, 252, 0.2);
+}
+
+@media (max-width: 768px) {
+  label {
+    font-size: 1rem;
+  }
+
+  .submit {
+    font-size: 1rem;
+  }
 }
