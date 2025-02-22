@@ -82,10 +82,10 @@ label {
 
 @media (max-width: 768px) {
   label {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .submit {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }

@@ -24,8 +24,7 @@ body {
   gap: 2rem;
   margin: 0.5rem auto;
   padding: 1.8rem;
-  width: 100%;
-  max-width: 1440px;
+  max-width: 90%;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -44,5 +43,9 @@ body {
   .flex {
     flex-direction: row;
     align-items: flex-start;
+  }
+
+  .form {
+    width: 35%;
   }
 }
